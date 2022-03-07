@@ -1,8 +1,57 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+}
+
+#lorem_ipsum_content {
+  display: none;
+}
+
+#content_wrapper, #minimap_wrapper, #minimap_content_wrapper {
+  display: flex;
+}
+
+#content_wrapper, #minimap_content_wrapper {
+  flex-wrap: wrap;
+}
+
+#content_wrapper {
+  box-sizing: border-box;
+  font-size: 150%;
+  max-width: 80%;
+  min-width: 80%;
+  padding: 30px 45px;
+  width: 80%;
+}
+
+#minimap_wrapper {
+  box-sizing: border-box;
+  max-width: 20%;
+  min-width: 20%;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#minimap_content_wrapper {
+  font-size: 37.5%;
+  padding: 8px 12px;
+}
+
+#minimap_viewport {
+  background-color: rgba(0, 0, 0, .3);
+  border: 3px solid grey;
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  width: 100%;
 }
