@@ -12,10 +12,6 @@ body, html {
   display: flex;
 }
 
-#lorem_ipsum_content {
-  display: none;
-}
-
 #content_wrapper, #minimap_wrapper, #minimap_content_wrapper {
   display: flex;
 }
@@ -33,6 +29,15 @@ body, html {
   width: 80%;
 }
 
+#content_wrapper svg {
+  height: auto;
+  width: 100%;
+}
+
+#content_wrapper svg path[id] {
+ cursor: pointer;
+}
+
 #minimap_wrapper {
   box-sizing: border-box;
   max-width: 20%;
@@ -48,8 +53,8 @@ body, html {
 }
 
 #minimap_viewport {
-  background-color: rgba(0, 0, 0, .3);
-  border: 3px solid grey;
+  background-color: rgba(131, 70, 145, 0.3);
+  border: 3px solid rgb(131, 70, 145);
   box-sizing: border-box;
   display: none;
   position: absolute;
