@@ -21,12 +21,10 @@ body, html {
 }
 
 #content_wrapper {
-  box-sizing: border-box;
-  font-size: 150%;
-  max-width: 80%;
-  min-width: 80%;
-  padding: 30px 45px;
-  width: 80%;
+  box-sizing: content-box;
+  padding: 5vh 5vw;
+  position: absolute;
+  width: 300vw;
 }
 
 #content_wrapper svg {
@@ -34,29 +32,40 @@ body, html {
   width: 100%;
 }
 
-#content_wrapper svg path[id] {
+#content_wrapper svg path[id], #content_wrapper svg path[class], #content_wrapper svg path[name] {
  cursor: pointer;
 }
 
+#content_wrapper svg path[id].highlighted, #content_wrapper svg path[class].highlighted, #content_wrapper svg path[name].highlighted {
+  fill: rgb(115, 117, 195);
+}
+
 #minimap_wrapper {
-  box-sizing: border-box;
-  max-width: 20%;
-  min-width: 20%;
+  background-color: rgb(115 117 195 / 80%);
+  border: 1px solid #808080;
+  border-radius: 3px;
+  bottom: 1vh;
+  box-sizing: content-box;
+  left: 1vh;
   position: fixed;
-  right: 0;
-  top: 0;
+  width: 30vw;
 }
 
 #minimap_content_wrapper {
-  font-size: 37.5%;
-  padding: 8px 12px;
+  padding: 0.5vh 0.5vw;
+}
+
+#minimap_content_wrapper svg {
+  height: auto;
+  width: 100%;
 }
 
 #minimap_viewport {
   background-color: rgba(131, 70, 145, 0.3);
   border: 3px solid rgb(131, 70, 145);
+  border-radius: 3px;
   box-sizing: border-box;
+  cursor: move;
   display: none;
   position: absolute;
-  width: 100%;
 }
